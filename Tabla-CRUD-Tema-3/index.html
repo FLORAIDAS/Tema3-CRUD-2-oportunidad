@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EJEMPLO DE CRUD </title>
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+    <table>
+        <tr>
+            <td>
+                <form autocomplete="off" onsubmit="onFormSubmit()">
+                    <div>
+                        <label for="NumeroAl"> Numero </label>
+                        <input type="text" name="NumeroAl" required="" pattern="[0-9]+" id="NumeroAl" placeholder="Agregue solo numeros">
+                    </div>
+                    <div>
+                        <label for="Alumno"> Nombre del Estudiante </label>
+                        <input type="text" name="Alumno" required="" pattern="[a-z A-Z]+"  id="Alumno" placeholder="Escribe solo con letras">
+                    </div>
+                    <div>
+                        <label for="Semestre"> Semestre </label>
+                        <input minlength="3" maxlength="3" type="text" name="Semestre" required="" id="Semestre" placeholder="Escribir con numeros y letras ejemplo: 4to">
+                    </div>
+                    <div>
+                        <label for="Grupo"> Grupo </label>
+                        <input minlength="3" maxlength="3" type="text" name="Grupo" required="" id="Grupo" placeholder="Se admiten números y letras, formato: MS4">
+                    </div>
+                    <div class="Botones">
+                        <input type="submit" value="Agregar" id="agregar">
+                        <input type="reset" value="Limpiar" id="limpiar">
+                    </div>
+                </form>
+                <td>
+                    <table class="lista" id="Encabezados">
+                        <thead>
+                            <tr>
+                                <th> Numero </th>
+                                <th> Alumno </th>
+                                <th> Semestre </th>
+                                <th> Grupo </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </td>
+        
+            </td>
+        </tr>
+    </table>
+
+    
+    <script src="logica.js"> </script>
+
+   
+  </body>
+</html>
